@@ -168,3 +168,12 @@ padding:70px 20px;
 }
 
 }
+.payment-icons img{
+    width:70px;
+    height:45px;
+    object-fit:contain;
+    background:#fff;
+    padding:8px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
