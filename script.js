@@ -1,22 +1,46 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
-  // Smooth scrolling
+  // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", function(e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute("href"))
-        ?.scrollIntoView({ behavior: "smooth" });
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({
+          behavior: "smooth"
+        });
+      }
     });
   });
 
-  // Navbar shadow on scroll
-  window.addEventListener("scroll", function () {
-    const nav = document.querySelector(".navbar");
-    if (window.scrollY > 50) {
-      nav.style.boxShadow = "0 4px 15px rgba(0,0,0,.2)";
+  // Navbar shadow
+  const navbar = document.querySelector(".navbar");
+
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 30) {
+      navbar.style.boxShadow = "0 5px 20px rgba(0,0,0,.15)";
     } else {
-      nav.style.boxShadow = "none";
+      navbar.style.boxShadow = "none";
     }
+  });
+
+  // Simple card animation
+  const cards = document.querySelectorAll(".card");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = "1";
+        entry.target.style.transform = "translateY(0)";
+      }
+    });
+  });
+
+  cards.forEach(card => {
+    card.style.opacity = "0";
+    card.style.transform = "translateY(40px)";
+    card.style.transition = "0.6s ease";
+    observer.observe(card);
   });
 
 });
