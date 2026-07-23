@@ -1,168 +1,47 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HOPE FOUND</title>
+<title>HOPE FOUND | One Rupee. One Hope. One Future.</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Arial,sans-serif;
-background:#f5f7fa;
-text-align:center;
-}
-
-header{
-    background:#16a34a;
-    color:white;
-    padding:25px;
-    text-align:center;
-}
-
-header h1{
-    margin:0;
-    font-size:32px;
-}
-
-    nav{
-    margin-top:15px;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:0 12px;
-    font-weight:bold;
-    font-size:16px;
-}
-
-nav a:hover{
-    text-decoration:underline;
-}
-}
-
-.hero{
-padding:60px 20px;
-}
-
-.hero h1{
-font-size:40px;
-color:#0f9d58;
-}
-
-.hero p{
-font-size:20px;
-color:#555;
-}
-
-button{
-padding:15px 30px;
-margin:10px;
-border:none;
-border-radius:10px;
-font-size:18px;
-cursor:pointer;
-}
-
-.donate{
-background:#0f9d58;
-color:white;
-}
-
-.apply{
-background:white;
-border:2px solid #0f9d58;
-color:#0f9d58;
-}
-
-.stats{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-padding:40px;
-}
-
-.card{
-background:white;
-padding:20px;
-border-radius:15px;
-width:200px;
-box-shadow:0 0 10px rgba(0,0,0,.1);
-}
-
-footer{
-margin-top:50px;
-background:#222;
-color:white;
-padding:20px;
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-    <h1>💚 HOPE FOUND</h1>
-    <p>One Rupee. One Hope. One Future.</p>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#">Donate</a>
-        <a href="#">Contact</a>
-    </nav>
+<nav class="navbar">
+<div class="logo">💚 HOPE FOUND</div>
+
+<ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#mission">Mission</a></li>
+<li><a href="#donate">Donate</a></li>
+<li><a href="#help">Apply</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
 </header>
 
-<div class="hero">
+<section id="home" class="hero">
 
-<h1>One Rupee. One Hope. One Future.</h1>
-<nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#">Donate</a>
-    <a href="#">Contact</a>
-</nav>
-<p>Together we can change lives with small donations.</p>
+<h1>One Rupee.<br>One Hope.<br>One Future.</h1>
 
-<button class="donate">Donate Now</button>
+<p>
+Together we can change lives with small donations and genuine support.
+Every contribution matters.
+</p>
 
-<button class="apply">Apply For Help</button>
+<a href="#donate" class="btn">Donate Now</a>
+<a href="#help" class="btn secondary">Apply For Help</a>
 
-</div>
-
-<div class="stats">
-
-<div class="card">
-<h2>0</h2>
-<p>Donors</p>
-</div>
-
-<div class="card">
-<h2>Rs.0</h2>
-<p>Total Donations</p>
-</div>
-
-<div class="card">
-<h2>0</h2>
-<p>Families Helped</p>
-</div>
-
-</div>
-
-<footer>
-
-© 2026 HOPE FOUND
-<section class="about">
-    <h2>About Hope Found</h2>
-    <p>
-        Hope Found is a non-profit initiative dedicated to helping families through small donations. Every rupee creates hope and changes lives.
-    </p>
 </section>
-</footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
